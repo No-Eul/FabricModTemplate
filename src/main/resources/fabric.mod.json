@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "modid",
+	"version": "${version}",
+	"name": "${name}",
+	"description": "The description of template mod",
+	"contact": {
+		"email": "me@NoEul.dev",
+		"homepage": "https://modrinth.com/mod/fabric-mod-template",
+		"issues": "https://github.com/No-Eul/FabricModTemplate",
+		"sources": "https://github.com/No-Eul/FabricModTemplate"
+	},
+	"authors": [
+		{
+			"name": "NoEul",
+			"contact": {
+				"email": "me@NoEul.dev",
+				"homepage": "https://NoEul.dev",
+				"sources": "https://github.com/No-Eul"
+			}
+		}
+	],
+	"contributors": [],
+	"license": "MIT",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["dev.noeul.fabricmod.modid.ModName"],
+		"modmenu": ["dev.noeul.fabricmod.modid.compat.modmenu.ModMenuApiImpl"]
+	},
+	"mixins": [
+		"modid.mixins.json"
+	],
+	"depends": {
+		"minecraft": "1.19.4",
+		"fabricloader": ">=0.14.21",
+		"fabric": "*"
+	},
+	"recommends": {
+		"modmenu": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": true
+		}
+	}
+}
