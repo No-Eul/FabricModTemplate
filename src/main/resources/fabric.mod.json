@@ -7,7 +7,7 @@
 	"contact": {
 		"email": "me@NoEul.dev",
 		"homepage": "https://modrinth.com/mod/fabric-mod-template",
-		"issues": "https://github.com/No-Eul/FabricModTemplate",
+		"issues": "https://github.com/No-Eul/FabricModTemplate/issues",
 		"sources": "https://github.com/No-Eul/FabricModTemplate"
 	},
 	"authors": [
@@ -32,8 +32,8 @@
 		"modid.mixins.json"
 	],
 	"depends": {
-		"minecraft": "1.19.4",
-		"fabricloader": ">=0.14.21",
+		"minecraft": "${minecraft_version}",
+		"fabricloader": ">=${loader_version}",
 		"fabric": "*"
 	},
 	"recommends": {

@@ -3,7 +3,7 @@ import java.util.*
 
 plugins {
 	id("java")
-	id("fabric-loom") version "1.1-SNAPSHOT"
+	id("fabric-loom") version "1.3-SNAPSHOT"
 	id("maven-publish")
 }
 
@@ -12,8 +12,8 @@ version = property("mod_version")!!
 
 repositories {
 	mavenCentral()
-	maven(url = "https://maven.terraformersmc.com/releases")
-	maven(url = "https://api.modrinth.com/maven") { name = "Modrinth" }
+	maven("https://maven.terraformersmc.com/releases")
+	maven("https://api.modrinth.com/maven") { name = "Modrinth" }
 }
 
 
@@ -95,16 +95,15 @@ tasks {
 	}
 
 	processResources {
-		inputs.properties(
-				"version" to project.version,
-				"name" to project.property("mod_name")
+		val inputs = mapOf(
+			"version" to project.version,
+			"name" to project.property("mod_name"),
+			"minecraft_version" to project.property("minecraft_version"),
+			"loader_version" to project.property("loader_version")
 		)
-
+		this.inputs.properties(inputs)
 		filesMatching("fabric.mod.json") {
-			expand(
-					"version" to project.version,
-					"name" to project.property("mod_name")
-			)
+			expand(inputs)
 		}
 	}
 

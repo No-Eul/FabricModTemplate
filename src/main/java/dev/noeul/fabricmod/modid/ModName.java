@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class ModName implements ModInitializer {
 	public static final ModContainer mod = FabricLoader.getInstance()
-			.getModContainer("centaur")
+			.getModContainer("modid")
 			.orElseThrow(NullPointerException::new);
 	public static final String ID = mod.getMetadata().getId();
 	public static final String NAME = mod.getMetadata().getName();
