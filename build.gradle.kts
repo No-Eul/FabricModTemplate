@@ -27,9 +27,9 @@ dependencies {
 
 	modRuntimeOnly("maven.modrinth:mixintrace:1.1.1+1.17")
 	modRuntimeOnly("maven.modrinth:notenoughcrashes:4.4.1+1.19.4-fabric")
-	modRuntimeOnly("maven.modrinth:language-reload:1.5.7+1.19.4")
+	modRuntimeOnly("maven.modrinth:language-reload:1.5.8+1.19.4")
 	modRuntimeOnly("maven.modrinth:smoothboot-fabric:1.19.4-1.7.0")
-	modRuntimeOnly("maven.modrinth:immediatelyfast:1.1.15+1.19.4")
+	modRuntimeOnly("maven.modrinth:immediatelyfast:1.1.20+1.19.4")
 	modRuntimeOnly("maven.modrinth:ferrite-core:5.2.0-fabric")
 	modRuntimeOnly("maven.modrinth:lithium:mc1.19.4-0.11.1")
 }
