@@ -14,6 +14,7 @@ repositories {
 	mavenCentral()
 	maven("https://maven.terraformersmc.com/releases")
 	maven("https://api.modrinth.com/maven") { name = "Modrinth" }
+	maven("https://jitpack.io")
 }
 
 
@@ -26,12 +27,13 @@ dependencies {
 	modImplementation("com.terraformersmc:modmenu:${property("mod_menu_version")}")
 
 	modRuntimeOnly("maven.modrinth:mixintrace:1.1.1+1.17")
-	modRuntimeOnly("maven.modrinth:notenoughcrashes:4.4.1+1.19.4-fabric")
-	modRuntimeOnly("maven.modrinth:language-reload:1.5.8+1.19.4")
-	modRuntimeOnly("maven.modrinth:smoothboot-fabric:1.19.4-1.7.0")
-	modRuntimeOnly("maven.modrinth:immediatelyfast:1.1.20+1.19.4")
-	modRuntimeOnly("maven.modrinth:ferrite-core:5.2.0-fabric")
-	modRuntimeOnly("maven.modrinth:lithium:mc1.19.4-0.11.1")
+	modRuntimeOnly("maven.modrinth:notenoughcrashes:4.4.5+1.20.1-fabric")
+	modRuntimeOnly("maven.modrinth:language-reload:1.5.8+1.20.1")
+//	modRuntimeOnly("maven.modrinth:smoothboot-fabric:1.19.4-1.7.0")
+	modRuntimeOnly("maven.modrinth:immediatelyfast:1.1.20+1.20.1")
+	modRuntimeOnly("com.github.LlamaLad7:MixinExtras:0.2.0-beta.9")
+	modRuntimeOnly("maven.modrinth:ferrite-core:6.0.0-fabric")
+	modRuntimeOnly("maven.modrinth:lithium:mc1.20.1-0.11.2")
 }
 
 loom {
@@ -59,6 +61,7 @@ loom {
 								if ("net.fabricmc${File.separator}sponge-mixin" in next)
 									return@use next
 							}
+							return@use null
 						}
 						?.let { "-javaagent:${it}" }
 		).filterNotNull()
