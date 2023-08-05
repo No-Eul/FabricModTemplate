@@ -7,12 +7,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ModName implements ModInitializer {
-	public static final ModContainer mod = FabricLoader.getInstance()
-			.getModContainer("modid")
-			.orElseThrow(NullPointerException::new);
-	public static final String ID = mod.getMetadata().getId();
-	public static final String NAME = mod.getMetadata().getName();
-	public static final Logger logger = LoggerFactory.getLogger(NAME);
+	public static final ModContainer MOD = FabricLoader.getInstance().getModContainer("modid").orElseThrow(NullPointerException::new);
+	public static final String ID = MOD.getMetadata().getId();
+	public static final String NAME = MOD.getMetadata().getName();
+	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
 	@Override
 	public void onInitialize() {

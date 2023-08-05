@@ -1,5 +1,5 @@
 import java.nio.charset.StandardCharsets
-import java.util.*
+import java.util.Scanner
 
 plugins {
 	id("java")
@@ -111,14 +111,14 @@ tasks {
 	}
 
 	jar {
-		from("LICENSE")
-		archiveBaseName.set("${project.property("mod_name")}")
-		archiveAppendix.set("fabric-${project.property("minecraft_version")}")
+		from("LICENSE.txt")
+		archiveBaseName.set("${project.property("archive_base_name")}")
+		archiveAppendix.set("fabric-mc${project.property("minecraft_version")}")
 	}
 
 	remapJar {
-		archiveBaseName.set("${project.property("mod_name")}")
-		archiveAppendix.set("fabric-${project.property("minecraft_version")}")
+		archiveBaseName.set("${project.property("archive_base_name")}")
+		archiveAppendix.set("fabric-mc${project.property("minecraft_version")}")
 	}
 }
 

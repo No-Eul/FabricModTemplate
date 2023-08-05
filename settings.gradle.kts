@@ -1,3 +1,4 @@
+rootProject.name = "FabricModTemplate"
 pluginManagement {
 	repositories {
 		gradlePluginPortal()
