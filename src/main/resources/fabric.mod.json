@@ -1,15 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "template",
 	"version": "${version}",
 	"name": "${name}",
-	"description": "The description of template mod",
-	"contact": {
-		"email": "me@NoEul.dev",
-		"homepage": "https://modrinth.com/mod/fabric-mod-template",
-		"issues": "https://github.com/No-Eul/FabricModTemplate/issues",
-		"sources": "https://github.com/No-Eul/FabricModTemplate"
-	},
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		{
 			"name": "NoEul",
@@ -20,21 +14,26 @@
 			}
 		}
 	],
+	"contact": {
+		"email": "me@NoEul.dev",
+		"homepage": "https://modrinth.com/mod/fabric-mod-template",
+		"issues": "https://github.com/No-Eul/FabricModTemplate/issues",
+		"sources": "https://github.com/No-Eul/FabricModTemplate"
+	},
 	"contributors": [],
 	"license": "MIT",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/template/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["dev.noeul.fabricmod.modid.ModName"],
-		"modmenu": ["dev.noeul.fabricmod.modid.compat.modmenu.ModMenuApiImpl"]
+		"main": ["dev.noeul.fabricmod.template.FabricModTemplate"]
 	},
 	"mixins": [
-		"modid.mixins.json"
+		"template.mixins.json"
 	],
 	"depends": {
 		"minecraft": "${minecraft_version}",
 		"fabricloader": ">=${loader_version}",
-		"fabric": "*"
+		"fabric": ">=${fabric_api_version}"
 	},
 	"recommends": {
 		"modmenu": "*"
