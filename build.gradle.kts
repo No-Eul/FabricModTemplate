@@ -10,6 +10,7 @@ version = property("mod_version")!!
 repositories {
 	mavenCentral()
 	maven("https://maven.terraformersmc.com/releases")
+	maven("https://maven.shedaniel.me/")
 	maven("https://api.modrinth.com/maven") { name = "Modrinth" }
 	maven("https://jitpack.io")
 }
@@ -23,7 +24,16 @@ dependencies {
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 	modImplementation("com.terraformersmc:modmenu:${property("mod_menu_version")}")
 
-	modRuntimeOnly("maven.modrinth:mixintrace:latest.release")
+	modRuntimeOnly("maven.modrinth:mixintrace:1.1.1+1.17") // https://modrinth.com/mod/mixintrace/versions
+	modRuntimeOnly("maven.modrinth:spark:1.10.73-fabric") { // https://modrinth.com/mod/spark/versions
+		modRuntimeOnly("me.lucko:fabric-permissions-api:0.3.1")
+	}
+	modRuntimeOnly("maven.modrinth:language-reload:1.6.1+1.21") // https://modrinth.com/mod/language-reload/versions
+	modRuntimeOnly("maven.modrinth:ferrite-core:7.0.0") // https://modrinth.com/mod/ferrite-core/versions
+	modRuntimeOnly("maven.modrinth:auth-me:8.0.0+1.21") { // https://modrinth.com/mod/auth-me/versions
+		// https://linkie.shedaniel.dev/dependencies?loader=fabric&version=1.21#dep-2
+		modRuntimeOnly("me.shedaniel.cloth:cloth-config-fabric:15.+")
+	}
 }
 
 loom {
@@ -87,13 +97,13 @@ tasks {
 		from("LICENSE.txt")
 		archiveBaseName.set("${project.property("archive_base_name")}")
 		archiveAppendix.set("fabric")
-		archiveClassifier.set("mc${project.property("minecraft_version")}")
+		archiveVersion.set("${project.version}+mc${project.property("minecraft_version")}")
 	}
 
 	remapJar {
 		archiveBaseName.set("${project.property("archive_base_name")}")
 		archiveAppendix.set("fabric")
-		archiveClassifier.set("mc${project.property("minecraft_version")}")
+		archiveVersion.set("${project.version}+mc${project.property("minecraft_version")}")
 	}
 }
 
