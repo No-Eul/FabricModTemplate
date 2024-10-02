@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "template",
+	"id": "templatemod",
 	"version": "${version}",
 	"name": "${name}",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -22,15 +22,15 @@
 	},
 	"contributors": [],
 	"license": "MIT",
-	"icon": "assets/template/icon.png",
+	"icon": "assets/templatemod/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["dev.noeul.fabricmod.template.FabricModTemplate"]
+		"main": ["dev.noeul.minecraftmod.templatemod.TemplateFabricMod"]
 	},
 	"mixins": [
-		"template.mixins.json"
+		"templatemod.mixins.json"
 	],
-	"accessWidener": "template.accesswidener",
+	"accessWidener": "templatemod.accesswidener",
 	"depends": {
 		"java": ">=${java_version}",
 		"minecraft": "${minecraft_version}",
