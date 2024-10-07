@@ -9,11 +9,17 @@ repositories {
 	mavenCentral()
 	maven("https://maven.terraformersmc.com/releases")
 	maven("https://api.modrinth.com/maven")
+	maven("https://maven.parchmentmc.org")
 }
 
 dependencies {
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
-	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
+//	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
+	@Suppress("UnstableApiUsage")
+	mappings(loom.layered() {
+		officialMojangMappings()
+		parchment("org.parchmentmc.data:${property("parchment_version")}@zip")
+	})
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
