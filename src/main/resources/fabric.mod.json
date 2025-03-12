@@ -17,8 +17,8 @@
 	"contact": {
 		"email": "me@NoEul.dev",
 		"homepage": "https://modrinth.com/mod/template-mod",
-		"issues": "https://github.com/No-Eul/FabricModTemplate/issues",
-		"sources": "https://github.com/No-Eul/FabricModTemplate"
+		"issues": "https://github.com/No-Eul/FabricTemplateMod/issues",
+		"sources": "https://github.com/No-Eul/FabricTemplateMod"
 	},
 	"contributors": [],
 	"license": "MIT",
