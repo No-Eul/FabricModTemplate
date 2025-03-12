@@ -1,4 +1,4 @@
-version:3953
+version:3955
 ao:true
 biomeBlendRadius:0
 enableVsync:true
@@ -15,7 +15,7 @@ prioritizeChunkUpdates:0
 fullscreen:false
 gamma:1.0
 graphicsMode:0
-guiScale:3
+guiScale:2
 maxFps:260
 mipmapLevels:0
 narrator:0
@@ -50,7 +50,7 @@ highContrast:false
 narratorHotkey:true
 resourcePacks:["fabric"]
 incompatibleResourcePacks:[]
-lastServer:localhost
+lastServer:wonderland-server.net
 lang:ko_kr
 chatVisibility:0
 chatOpacity:1.0

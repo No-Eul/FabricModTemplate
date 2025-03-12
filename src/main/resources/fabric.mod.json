@@ -16,7 +16,7 @@
 	],
 	"contact": {
 		"email": "me@NoEul.dev",
-		"homepage": "https://modrinth.com/mod/fabric-mod-template",
+		"homepage": "https://modrinth.com/mod/template-mod",
 		"issues": "https://github.com/No-Eul/FabricModTemplate/issues",
 		"sources": "https://github.com/No-Eul/FabricModTemplate"
 	},
@@ -25,7 +25,7 @@
 	"icon": "assets/templatemod/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["dev.noeul.minecraftmod.templatemod.TemplateFabricMod"]
+		"main": ["dev.noeul.fabricmod.templatemod.TemplateMod"]
 	},
 	"mixins": [
 		"templatemod.mixins.json"

@@ -1,4 +1,4 @@
-rootProject.name = "FabricModTemplate"
+rootProject.name = "template-mod"
 
 pluginManagement {
 	repositories {
