@@ -8,7 +8,7 @@ import kotlin.io.path.exists
 plugins {
 	// Fabric Loom - https://maven.fabricmc.net/fabric-loom/fabric-loom.gradle.plugin/maven-metadata.xml
 	id("java")
-	id("fabric-loom") version "1.10.4"
+	id("fabric-loom") version "1.10.5"
 	id("com.dorongold.task-tree") version "4.0.0"
 }
 
@@ -35,7 +35,7 @@ dependencies {
 
 	// Language Reloaded - https://modrinth.com/mod/language-reload/versions
 	modRuntimeOnly("maven.modrinth:mixintrace:1.1.1+1.17")
-	modRuntimeOnly("maven.modrinth:language-reload:1.7.2+1.21.4")
+	modRuntimeOnly("maven.modrinth:language-reload:1.7.3+1.21.4")
 }
 
 // region Toolchain Configurations
