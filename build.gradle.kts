@@ -114,9 +114,10 @@ tasks {
 			"mod_id" to project.property("mod_id"),
 			"name" to project.property("mod_name"),
 			"version" to project.version,
+			"java_version" to project.property("targetCompatibility"),
 			"minecraft_version" to project.property("minecraft_version"),
 			"loader_version" to project.property("loader_version"),
-			"java_version" to project.property("targetCompatibility"),
+			"fabric_api_version" to project.property("fabric_api_version"),
 		)
 
 		filesMatching("fabric.mod.json") {
