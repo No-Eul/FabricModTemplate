@@ -35,7 +35,7 @@ dependencies {
 
 	// Language Reloaded - https://modrinth.com/mod/language-reload/versions
 	modRuntimeOnly("maven.modrinth:mixintrace:1.1.1+1.17")
-	modRuntimeOnly("maven.modrinth:language-reload:1.7.4+1.21.5")
+	modRuntimeOnly("maven.modrinth:language-reload:1.7.4+1.21.6")
 }
 
 // region Toolchain Configurations
