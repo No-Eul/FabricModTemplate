@@ -28,8 +28,6 @@ dependencies {
 	})*/
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
-	// Fabric API - https://fabricmc.net/develop/
-	// Mod Menu - https://modrinth.com/mod/modmenu/versions
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 	modImplementation("com.terraformersmc:modmenu:${property("mod_menu_version")}")
 
@@ -50,7 +48,7 @@ java {
 
 loom {
 	sourceSets["main"].resources.files
-		.find { file -> file.endsWith(".accesswidener") }
+		.find { file -> file.extension.equals("accesswidener", true) }
 		?.let(accessWidenerPath::set)
 
 	mixin.defaultRefmapName.set("${property("mod_id")}.refmap.json")
