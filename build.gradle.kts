@@ -8,7 +8,7 @@ import kotlin.io.path.exists
 plugins {
 	// Fabric Loom - https://maven.fabricmc.net/fabric-loom/fabric-loom.gradle.plugin/maven-metadata.xml
 	id("java")
-	id("fabric-loom") version "1.11.1"
+	id("fabric-loom") version "1.11.4"
 	id("com.dorongold.task-tree") version "4.0.0"
 }
 
