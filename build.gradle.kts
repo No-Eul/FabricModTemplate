@@ -10,6 +10,7 @@ plugins {
 	id("java")
 	id("fabric-loom") version "1.11.4"
 	id("com.dorongold.task-tree") version "4.0.0"
+	id("idea")
 }
 
 repositories {
@@ -101,6 +102,13 @@ loom {
 				.firstOrNull()
 				.let { vmArg("-javaagent:$it") }
 		}
+	}
+}
+
+idea {
+	module {
+		isDownloadSources = true
+		isDownloadJavadoc = true
 	}
 }
 
